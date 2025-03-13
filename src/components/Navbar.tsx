@@ -36,12 +36,18 @@ const Navbar = () => {
   const isHomePage = location.pathname === "/";
 
   const handleNavClick = (e, path) => {
-    if (isHomePage && path.startsWith("/#")) {
+    if (path.startsWith("/#")) {
       e.preventDefault();
       const elementId = path.replace("/#", "");
       const element = document.getElementById(elementId);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        // If we're on the home page, smooth scroll
+        if (isHomePage) {
+          element.scrollIntoView({ behavior: "smooth" });
+        } else {
+          // If we're on another page, navigate to home page with hash
+          window.location.href = path;
+        }
       }
       setIsOpen(false);
     }

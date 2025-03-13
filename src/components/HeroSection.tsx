@@ -51,7 +51,7 @@ const HeroSection = ({
             <div className="animate-fade-in-up delay-300">
               <Link
                 to={buttonLink}
-                className="inline-flex items-center gap-2 bg-maos-red hover:bg-maos-red/90 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:gap-3"
+                className="inline-flex items-center gap-2 bg-maos-blue hover:bg-maos-blue/90 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:gap-3"
               >
                 {buttonText}
                 <ArrowRight size={18} />

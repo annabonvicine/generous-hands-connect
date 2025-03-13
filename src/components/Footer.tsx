@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-maos-sand py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-1 lg:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-maos-red flex items-center justify-center">
                 <span className="text-white font-bold text-lg">MG</span>
@@ -95,7 +95,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/historia"
+                  to="/#mission"
                   className="text-gray-700 hover:text-maos-red transition-colors"
                 >
                   História
@@ -103,7 +103,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/importancia"
+                  to="/#testimonials"
                   className="text-gray-700 hover:text-maos-red transition-colors"
                 >
                   Importância da Doação
@@ -111,7 +111,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/contato"
+                  to="/#impact"
                   className="text-gray-700 hover:text-maos-red transition-colors"
                 >
                   Contato
@@ -139,27 +139,6 @@ const Footer = () => {
                 <span className="text-gray-700">contato@maosgenerosas.org</span>
               </li>
             </ul>
-          </div>
-          
-          <div className="col-span-1 md:col-span-3 lg:col-span-1">
-            <h3 className="font-heading font-semibold text-xl mb-4">Assine Nossa Newsletter</h3>
-            <p className="text-gray-700 mb-4">
-              Receba atualizações sobre nossas ações e eventos.
-            </p>
-            <form className="space-y-3">
-              <input
-                type="email"
-                placeholder="Seu e-mail"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-maos-red focus:border-transparent"
-                required
-              />
-              <button
-                type="submit"
-                className="w-full bg-maos-red hover:bg-maos-red/90 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-md"
-              >
-                Assinar
-              </button>
-            </form>
           </div>
         </div>
         
