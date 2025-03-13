@@ -21,7 +21,7 @@ const Index = () => {
       />
       
       {/* Mission and Values */}
-      <section className="section-container py-20">
+      <section id="mission" className="section-container py-20">
         <div className="text-center mb-16">
           <span className="inline-block px-3 py-1 mb-4 rounded-full bg-maos-red/10 text-maos-red text-sm font-medium">
             Nossa Missão
@@ -79,7 +79,7 @@ const Index = () => {
       </section>
       
       {/* Impact Numbers */}
-      <section className="bg-maos-sand py-20">
+      <section id="impact" className="bg-maos-sand py-20">
         <div className="section-container">
           <div className="text-center mb-16">
             <span className="inline-block px-3 py-1 mb-4 rounded-full bg-white/40 backdrop-blur-sm text-maos-red text-sm font-medium">
@@ -118,7 +118,7 @@ const Index = () => {
       </section>
       
       {/* Testimonials */}
-      <section className="section-container py-20">
+      <section id="testimonials" className="section-container py-20">
         <div className="text-center mb-16">
           <span className="inline-block px-3 py-1 mb-4 rounded-full bg-maos-red/10 text-maos-red text-sm font-medium">
             Depoimentos
@@ -156,7 +156,7 @@ const Index = () => {
       </section>
       
       {/* Call to Action */}
-      <section className="bg-maos-red py-20">
+      <section id="home" className="bg-maos-red py-20">
         <div className="section-container text-center">
           <span className="inline-block px-3 py-1 mb-4 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium">
             Faça Parte
@@ -165,113 +165,11 @@ const Index = () => {
             Sua ajuda pode transformar vidas
           </h2>
           <p className="text-lg text-white/90 max-w-3xl mx-auto mb-8 text-balance">
-            Existem diversas formas de contribuir com nossa causa. Cada doação, cada minuto de voluntariado faz uma enorme diferença.
+            Existem diversas formas de contribuir com nossa causa. Cada doação faz uma enorme diferença.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <DonateButton variant="secondary" size="lg" />
-            <Link
-              to="/contato"
-              className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white font-medium py-4 px-8 rounded-full transition-all duration-300 hover:shadow-md hover:bg-white/10 hover:gap-3"
-            >
-              Entre em Contato
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-      
-      {/* Locations */}
-      <section className="section-container py-20">
-        <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 mb-4 rounded-full bg-maos-red/10 text-maos-red text-sm font-medium">
-            Onde Atuamos
-          </span>
-          <h2 className="heading-lg mb-6 text-balance">
-            Nossas áreas de atuação
-          </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto text-balance">
-            Estamos presentes em diversas comunidades, levando alimento e esperança para quem mais precisa.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="glass-panel overflow-hidden rounded-2xl hover-lift">
-            <img 
-              src="https://images.unsplash.com/photo-1504376379689-8d54347b26c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2836&q=80" 
-              alt="Comunidade Vila Esperança" 
-              className="w-full h-48 object-cover"
-              loading="lazy"
-            />
-            <div className="p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <MapPin className="w-5 h-5 text-maos-red" />
-                <span className="font-medium">Zona Leste</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Comunidade Vila Esperança</h3>
-              <p className="text-gray-700 mb-4 text-balance">
-                Atuamos semanalmente com distribuição de alimentos e suporte às famílias.
-              </p>
-              <Link 
-                to="/importancia" 
-                className="text-maos-red font-medium hover:underline inline-flex items-center gap-1"
-              >
-                Saiba mais
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-          
-          <div className="glass-panel overflow-hidden rounded-2xl hover-lift">
-            <img 
-              src="https://images.unsplash.com/photo-1509059852496-f3822ae057bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2145&q=80" 
-              alt="Comunidade Jardim Paulista" 
-              className="w-full h-48 object-cover"
-              loading="lazy"
-            />
-            <div className="p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <MapPin className="w-5 h-5 text-maos-red" />
-                <span className="font-medium">Zona Sul</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Comunidade Jardim Paulista</h3>
-              <p className="text-gray-700 mb-4 text-balance">
-                Centro de distribuição permanente com atendimento diário às famílias.
-              </p>
-              <Link 
-                to="/importancia" 
-                className="text-maos-red font-medium hover:underline inline-flex items-center gap-1"
-              >
-                Saiba mais
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-          
-          <div className="glass-panel overflow-hidden rounded-2xl hover-lift">
-            <img 
-              src="https://images.unsplash.com/photo-1607748851687-ba9a10438621?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80" 
-              alt="Comunidade Novo Horizonte" 
-              className="w-full h-48 object-cover"
-              loading="lazy"
-            />
-            <div className="p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <MapPin className="w-5 h-5 text-maos-red" />
-                <span className="font-medium">Zona Norte</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Comunidade Novo Horizonte</h3>
-              <p className="text-gray-700 mb-4 text-balance">
-                Projeto de horta comunitária e distribuição de refeições prontas.
-              </p>
-              <Link 
-                to="/importancia" 
-                className="text-maos-red font-medium hover:underline inline-flex items-center gap-1"
-              >
-                Saiba mais
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>

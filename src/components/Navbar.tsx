@@ -27,11 +27,25 @@ const Navbar = () => {
   }, [location]);
 
   const navLinks = [
-    { name: "Início", path: "/" },
-    { name: "História", path: "/historia" },
-    { name: "Importância da Doação", path: "/importancia" },
-    { name: "Contato", path: "/contato" },
+    { name: "Início", path: "/#home" },
+    { name: "História", path: "/#mission" },
+    { name: "Importância da Doação", path: "/#testimonials" },
+    { name: "Contato", path: "/#impact" },
   ];
+
+  const isHomePage = location.pathname === "/";
+
+  const handleNavClick = (e, path) => {
+    if (isHomePage && path.startsWith("/#")) {
+      e.preventDefault();
+      const elementId = path.replace("/#", "");
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      setIsOpen(false);
+    }
+  };
 
   return (
     <nav
@@ -57,17 +71,18 @@ const Navbar = () => {
           {/* Desktop menu */}
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.path}
-                to={link.path}
+                href={link.path}
+                onClick={(e) => handleNavClick(e, link.path)}
                 className={`font-medium transition-colors duration-200 hover:text-maos-red ${
-                  location.pathname === link.path
+                  location.hash === link.path.replace("/", "") || (location.pathname === "/" && location.hash === "" && link.path === "/#home")
                     ? "text-maos-red"
                     : "text-gray-700"
                 }`}
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
             <Link
               to="/contato"
@@ -104,17 +119,18 @@ const Navbar = () => {
       >
         <div className="px-4 pt-2 pb-6 space-y-1 bg-white/95 backdrop-blur-md shadow-md">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.path}
-              to={link.path}
+              href={link.path}
+              onClick={(e) => handleNavClick(e, link.path)}
               className={`block py-3 px-4 rounded-lg font-medium ${
-                location.pathname === link.path
+                location.hash === link.path.replace("/", "") || (location.pathname === "/" && location.hash === "" && link.path === "/#home")
                   ? "bg-maos-sand text-maos-red"
                   : "text-gray-700 hover:bg-gray-100"
               }`}
             >
               {link.name}
-            </Link>
+            </a>
           ))}
           <div className="pt-2">
             <Link
